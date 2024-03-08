@@ -31,7 +31,8 @@ public class player {
         
         lv += 1;
         max_exp += lv * 100;
-        max_HP += lv + (luck / 2); 
+        max_HP += lv + (luck / 2);
+        player.healTaken(lv); 
     }
 
 

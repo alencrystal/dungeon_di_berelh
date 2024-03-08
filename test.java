@@ -12,8 +12,7 @@ public class test {
         player.reName(newName);
         getJob.chooseClass();
         player.newLv();
-        enemy.chooseGoblin();
-        
+        enemy.chooseGoblin(); 
         enemy.getStats();
 
 
