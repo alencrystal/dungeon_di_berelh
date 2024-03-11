@@ -13,7 +13,7 @@ public class test {
         getJob.chooseClass();
         player.newLv();
         enemy.chooseGoblin(); 
-        enemy.getStats();
+        fight.calculation();
 
 
         sc.close();
