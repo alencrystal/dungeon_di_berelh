@@ -3,8 +3,9 @@ public class fight {
     public static void calculation (){
 
         int dmgPlayer = attack.dmg(1, 0, 1, 0);
-        System.out.println("player dmg =" + dmgPlayer);
-        player.HP = player.HP - dmgPlayer;
+        enemy.HP = enemy.HP - dmgPlayer;
+        System.out.println("player dmg =" + dmgPlayer +"\nenemy HP = "+ enemy.HP);
+
 
         if (enemy.HP <= 0) {
                 
@@ -12,9 +13,10 @@ public class fight {
         }
         else{
 
-            int dmgEnemy = attack.dmg(1, 0, 1, 0);
-            System.out.println("player dmg =" + dmgEnemy);
+            int dmgEnemy = defend.dmg(1, 0, 1, 0);
             player.HP = player.HP - dmgEnemy;
+            System.out.println("enemy dmg =" + dmgEnemy +"\nHP rimanenti = " + player.HP);
+            
 
             if (player.HP <= 0){
                 

@@ -13,7 +13,9 @@ public class enemy {
     static int expDrop;
     static int atkCombo = 0;
 
-    public static void lvUp(){                          //il lv-up dei mostri automatico
+    public static void lvUp(){                          //il lv-up dei mostri automatico + frase spawn
+
+        System.out.println("è apparso un "+ enemy.name + "!");
 
         if (player.lv > enemy.lv) {
             

@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class player {
 
     static String name;                            //tutte le variabili del pg 
@@ -14,8 +15,16 @@ public class player {
     static int max_exp;
     
 
-    public static void reName(String n){                        //Pg.reName() per rinominare il pg
-        name = n;
+    public static void reName(){                        //Pg.reName() per rinominare il pg
+        
+        Scanner sc=new Scanner(System.in);
+
+        System. out. print("\033[H\033[2J");
+        System.out.println("inserisci il tuo nome");
+        String newName = sc.nextLine();
+        player.name = newName;
+
+        sc.close();
     }
 
     public static int healTaken(int i){                         //per curarsi con il cap di 50 (la max vita)
