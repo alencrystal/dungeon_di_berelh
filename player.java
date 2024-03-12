@@ -38,10 +38,11 @@ public class player {
 
     public static void getStats(){                       //returna le statistiche
 
-        System. out. print("\033[H\033[2J");
         System.out.println("nome: "+ name +"\nclasse: "+ role +"\nlv: "+ lv +"\nexp: "+ exp + " /" + max_exp +"\nvita "+ HP + " /" + max_HP);
         System.out.println("\nforza "+ AD +"\nmagia "+ AP +"\ndifesa "+ def +"\nresistenza "+ mres +"\nfortuna "+ luck);
     }
 
     
+
+    //              System. out. print("\033[H\033[2J");
 }
