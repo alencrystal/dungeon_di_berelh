@@ -1,10 +1,11 @@
 public class fight {
     
-    public static void calculation (){
+    public static void calculation () throws InterruptedException {
 
         int dmgPlayer = attack.dmg(1, 0, 1, 0);
         enemy.HP = enemy.HP - dmgPlayer;
-        System.out.println("player dmg =" + dmgPlayer +"\nenemy HP = "+ enemy.HP);
+        Thread.sleep(1000);
+        System.out.println("player dmg =" + dmgPlayer);
 
 
         if (enemy.HP <= 0) {
@@ -15,18 +16,25 @@ public class fight {
 
             int dmgEnemy = defend.dmg(1, 0, 1, 0);
             player.HP = player.HP - dmgEnemy;
-            System.out.println("enemy dmg =" + dmgEnemy +"\nHP rimanenti = " + player.HP);
+            Thread.sleep(1000);
+            System.out.println("enemy dmg =" + dmgEnemy);
+            Thread.sleep(1000);
+            System.out.println("HP rimanenti = " + player.HP);
+            Thread.sleep(1000);
             
 
             if (player.HP <= 0){
                 
+                Thread.sleep(2000);
+                System. out. print("\033[H\033[2J");
                 System.out.println("fine partita, sei stato sconfitto.");
+                Thread.sleep(2000);
                 player.getStats();
             }
         }
     }
 
-    public static void start(){                     //per scegliere gli attacchi(devo ancora implementarlo)
+    public static void start() throws InterruptedException{                     //per scegliere gli attacchi(devo ancora implementarlo)
 
         if (player.HP > 0 && enemy.HP > 0) {
             

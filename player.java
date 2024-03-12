@@ -24,7 +24,6 @@ public class player {
         String newName = sc.nextLine();
         player.name = newName;
 
-        sc.close();
     }
 
     public static int healTaken(int i){                         //per curarsi con il cap di 50 (la max vita)
