@@ -9,7 +9,7 @@ public class getJob {
         player.AD = 2;
         player.AP = 0;
         player.def = 2;
-        player.mres = 2;
+        player.mres = 1;
         player.luck = 0;
         player.lv = 1;
         player.exp = 0;
