@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class getJob {
 
-    public static void warrior(){
+    public static void warrior(){               //classe combattente con le sue stats 
         player.role = "combattente";
         player.max_HP = 20;
         player.HP = player.max_HP;

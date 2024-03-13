@@ -4,13 +4,9 @@ public class test {
         
         player.reName();
         getJob.chooseClass();
-        enemy.chooseGoblin();
+        enemy.chooseGoblin();    
+        fight.start();
         
-        
-        while (player.HP > 0) {
-            
-            fight.start();
-        }
 
     }
 

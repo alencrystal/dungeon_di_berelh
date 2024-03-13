@@ -9,11 +9,14 @@ public class fight {
 
 
         if (enemy.HP <= 0) {
-                
+            
+            Thread.sleep(1000);
             System.out.println("hai sconfitto il "+ enemy.name +", complimenti!");
         }
         else{
 
+            Thread.sleep(1000);
+            System.out.println("HP nemico rimanenti = " + enemy.HP);
             int dmgEnemy = defend.dmg(1, 0, 1, 0);
             player.HP = player.HP - dmgEnemy;
             Thread.sleep(1000);
@@ -36,7 +39,7 @@ public class fight {
 
     public static void start() throws InterruptedException{                     //per scegliere gli attacchi(devo ancora implementarlo)
 
-        if (player.HP > 0 && enemy.HP > 0) {
+        while (player.HP > 0 && enemy.HP > 0) {
             
             fight.calculation();
         }      
