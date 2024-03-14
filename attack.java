@@ -5,7 +5,11 @@ public class attack {
 
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
-        return rand1 + player.AD * a + player.AP * b - enemy.def * c - enemy.mres * d;
+        int hit = rand1 + player.AD * a + player.AP * b - enemy.def * c - enemy.mres * d;
+        if (hit < 0) {
+            hit = 0;
+        }
+        return hit;
     }
 
 }

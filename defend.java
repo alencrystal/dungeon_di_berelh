@@ -4,7 +4,11 @@ public class defend {
     public static int dmg(int a, int b, int c, int d){
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
-        return rand1 + enemy.AD * a + enemy.AP * b - player.def * c - player.mres * d;
+        int hit = rand1 + enemy.AD * a + enemy.AP * b - player.def * c - player.mres * d;
+        if (hit < 0) {
+            hit = 0;
+        }
+        return hit;
     }
 
 
