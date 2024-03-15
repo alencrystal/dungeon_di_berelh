@@ -40,9 +40,58 @@ public class player {
         lv += 1;
         max_exp += lv * 100;
         max_HP += lv + (luck / 2);
-        player.healTaken(lv); 
+        player.healTaken(lv);
+        player.upgrade();
+        player.getStats();
+        
     }
 
+    public static void upgrade(){
+
+        boolean syntax = false;
+        Scanner sc=new Scanner(System.in);
+        
+        while (syntax == false) {
+
+            System. out. print("\033[H\033[2J");
+            System.out.println("scegli che statistica potenziare (hp, ad, ap, def, mres, luck)");
+            String lavoro = sc.nextLine();
+            
+            switch (lavoro) {
+
+                case "hp":
+                    player.HP += 3;
+                    player.max_HP += 3;
+                    syntax = true;
+                    break;
+                case "ad":
+                    player.AD += 1;
+                    syntax = true;
+                    break;
+                case "ap":
+                    player.AP += 1;
+                    syntax = true;
+                    break;
+                case "def":
+                    player.def += 1;
+                    syntax = true;
+                    break;
+                case "mres":
+                    player.mres += 1;
+                    syntax = true;
+                    break;
+                case "luck":
+                    player.luck += 1;
+                    syntax = true;
+                    break;
+                default:
+                    break;
+                
+            }
+            
+        }
+        System. out. print("\033[H\033[2J");   
+    }
 
     public static void getStats(){                       //returna le statistiche
 
