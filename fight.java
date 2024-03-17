@@ -2,7 +2,7 @@ public class fight {
     
     public static void calculation () throws InterruptedException {
 
-        int dmgPlayer = attack.dmg(1, 0, 1, 0);
+        int dmgPlayer = attack.select();
         enemy.HP = enemy.HP - dmgPlayer;
         Thread.sleep(1000);
         System.out.println("player dmg =" + dmgPlayer);

@@ -2,11 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 public class attack {
     
-    public static int dmg(int a, int b, int c, int d){
+    public static int dmg(int adMultiplier, int apMultiplier, int defMultiplier, int mresMultiplier){
 
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
-        int hit = rand1 + player.AD * a + player.AP * b - enemy.def * c - enemy.mres * d;
+        int hit = rand1 + player.AD * adMultiplier + player.AP * apMultiplier - enemy.def * defMultiplier - enemy.mres * mresMultiplier;
         if (hit < 0) {
             hit = 0;
         }
@@ -14,8 +14,9 @@ public class attack {
     }
 
 
-    public static void select(){
+    public static int select(){
 
+        int finalDmg = 0;
         boolean syntax = false;
         Scanner sc=new Scanner(System.in);
         
@@ -28,27 +29,27 @@ public class attack {
             switch (lavoro) {
 
                 case "1":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(1, 0, 1, 0);
                     syntax = true;
                     break;
                 case "2":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(0, 1, 0, 1);
                     syntax = true;
                     break;
                 case "3":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(1, 1, 1, 1);
                     syntax = true;
                     break;
                 case "4":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(2, 0, 1, 1);
                     syntax = true;
                     break;
                 case "5":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(0, 2, 1, 1);
                     syntax = true;
                     break;
                 case "6":
-                    attack.dmg(1, 0, 1, 0);
+                    finalDmg = attack.dmg(0, 0, 0, 0);
                     syntax = true;
                     break;
                 default:
@@ -57,7 +58,8 @@ public class attack {
             }
             
         }
-        System. out. print("\033[H\033[2J");   
+        System. out. print("\033[H\033[2J");
+        return finalDmg;
     }
 
 }
