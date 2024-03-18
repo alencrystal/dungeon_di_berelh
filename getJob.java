@@ -26,7 +26,7 @@ public class getJob {
         player.mres = 2;
         player.luck = 0;
         player.lv = 1;
-        player.exp = 0;
+        player.exp = 70;
         player.max_exp = 100;
     }
 

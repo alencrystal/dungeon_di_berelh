@@ -12,6 +12,9 @@ public class fight {
             
             Thread.sleep(1000);
             System.out.println("hai sconfitto il "+ enemy.name +", complimenti!");
+            player.exp += enemy.expDrop;
+            Thread.sleep(2000);
+            player.newLv();
         }
         else{
 
@@ -30,7 +33,7 @@ public class fight {
                 
                 Thread.sleep(2000);
                 System. out. print("\033[H\033[2J");
-                System.out.println("fine partita, sei stato sconfitto.");
+                System.out.println("fine partita, sei stato sconfitto.\n\n");
                 Thread.sleep(2000);
                 player.getStats();
             }

@@ -2,11 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 public class attack {
     
-    public static int dmg(int adMultiplier, int apMultiplier, int defMultiplier, int mresMultiplier){
+    public static int dmg(int adBuild, int apBuild, int defBuild, int mresBuild){
 
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
-        int hit = rand1 + player.AD * adMultiplier + player.AP * apMultiplier - enemy.def * defMultiplier - enemy.mres * mresMultiplier;
+        int hit = rand1 + player.AD * adBuild + player.AP * apBuild - enemy.def * defBuild - enemy.mres * mresBuild;
         if (hit < 0) {
             hit = 0;
         }
@@ -14,7 +14,7 @@ public class attack {
     }
 
 
-    public static int select(){
+    public static int select() throws InterruptedException{
 
         int finalDmg = 0;
         boolean syntax = false;
@@ -23,10 +23,10 @@ public class attack {
         while (syntax == false) {
 
             System. out. print("\033[H\033[2J");
-            System.out.println("scegli che attacco eserguire");
-            String lavoro = sc.nextLine();
+            System.out.println("scegli che attacco eserguire (per tutorial premi scrivi 'info')");
+            String numberSelect = sc.nextLine();
             
-            switch (lavoro) {
+            switch (numberSelect) {
 
                 case "1":
                     finalDmg = attack.dmg(1, 0, 1, 0);
@@ -51,6 +51,9 @@ public class attack {
                 case "6":
                     finalDmg = attack.dmg(0, 0, 0, 0);
                     syntax = true;
+                    break;
+                case "info":
+                    tutorial.Fight();
                     break;
                 default:
                     break;

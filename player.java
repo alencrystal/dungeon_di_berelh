@@ -36,15 +36,19 @@ public class player {
     }
 
     public static void newLv(){
-        
-        lv += 1;
-        max_exp += lv * 100;
-        max_HP += lv + (luck / 2);
-        player.healTaken(lv);
-        player.upgrade();
-        player.getStats();
-        
+       
+        if (player.exp >= player.max_exp){
+
+            System.out.println("complimenti! sei salito di livello");
+            lv += 1;
+            max_exp += lv * 100;
+            max_HP += lv + (luck / 2);
+            player.healTaken(lv);
+            player.upgrade();
+            player.getStats();
+        }
     }
+
 
     public static void upgrade(){
 
