@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class getJob {
 
-    public static void warrior(){               //classe combattente con le sue stats 
+    public static void warrior() throws InterruptedException{               //classe combattente con le sue stats 
         player.role = "combattente";
         player.max_HP = 20;
         player.HP = player.max_HP;
@@ -12,12 +12,7 @@ public class getJob {
         player.mres = 1;
         player.luck = 0;
         player.lv = 1;
-        player.atkSlot[0] = true;
-        player.atkSlot[1] = false;
-        player.atkSlot[2] = false;
-        player.atkSlot[3] = false;
-        player.atkSlot[4] = false;
-
+        player.atkSlot[0] = true;   
     }
 
     public static void wizard(){                 //classe mago con le sue stats 
@@ -54,7 +49,7 @@ public class getJob {
         player.atkSlot[4] = false;
     }
     
-    public static void chooseClass(){
+    public static void chooseClass() throws InterruptedException{
 
         boolean syntax = false;
         Scanner sc=new Scanner(System.in);

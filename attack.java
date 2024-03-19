@@ -40,7 +40,7 @@ public class attack {
                 case "1":
 
                     //solo ad, se possiedi l'attacco
-                    if (player.atkSlot[0] = true) {
+                    if (player.atkSlot[0] == true) {
                         finalDmg = attack.dmg(1, 0, 1, 0);
                         syntax = true;
                     }
@@ -50,7 +50,7 @@ public class attack {
                 case "2":
 
                     //solo ap, se possiedi l'attacco
-                    if (player.atkSlot[1] = true) {
+                    if (player.atkSlot[1] == true) {
                         finalDmg = attack.dmg(0, 1, 0, 1);
                         syntax = true;   
                     }
@@ -60,7 +60,7 @@ public class attack {
                 case "3":
 
                     //entrambi, se possiedi l'attacco
-                    if (player.atkSlot[2] = true) {
+                    if (player.atkSlot[2] == true) {
                         finalDmg = attack.dmg(1, 1, 1, 1);
                         syntax = true;   
                     }
@@ -70,7 +70,7 @@ public class attack {
                 case "4":
 
                     //doppio ad, se possiedi l'attacco
-                    if (player.atkSlot[3] = true) {
+                    if (player.atkSlot[3] == true) {
                         finalDmg = attack.dmg(2, 0, 1, 1);
                         syntax = true;   
                     }
@@ -80,7 +80,7 @@ public class attack {
                 case "5":
 
                     //doppio ap, se possiedi l'attacco
-                    if (player.atkSlot[4] = true) {
+                    if (player.atkSlot[4] == true) {
                         finalDmg = attack.dmg(0, 2, 1, 1);
                         syntax = true;   
                     }

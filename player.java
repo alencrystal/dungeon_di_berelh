@@ -12,8 +12,8 @@ public class player {
     static int luck;                                //luck sarebbe l'heal bonus
     static int lv;
     static int exp = 0;
-    static int max_exp = 100;                       //per raggiungere il livello successivo bisogna raggiungere la max_exp
-    static boolean atkSlot[];                       //a seconda di che valori si hanno al suo interno il player può eseguire diversi attacchi
+    static int max_exp = 100;                                       //per raggiungere il livello successivo bisogna raggiungere la max_exp
+    static boolean[] atkSlot = {false, false, false, false, false};       //a seconda di che valori si hanno al suo interno il player può eseguire diversi attacchi
     
 
     public static void reName(){                        //Pg.reName() per rinominare il pg
