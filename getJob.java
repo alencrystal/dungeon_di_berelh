@@ -12,9 +12,15 @@ public class getJob {
         player.mres = 1;
         player.luck = 0;
         player.lv = 1;
+        player.atkSlot[0] = true;
+        player.atkSlot[1] = false;
+        player.atkSlot[2] = false;
+        player.atkSlot[3] = false;
+        player.atkSlot[4] = false;
+
     }
 
-    public static void wizard(){                 //classe combattente con le sue stats 
+    public static void wizard(){                 //classe mago con le sue stats 
         player.role = "mago";
         player.max_HP = 15;
         player.HP = player.max_HP;
@@ -24,9 +30,14 @@ public class getJob {
         player.mres = 2;
         player.luck = 0;
         player.lv = 1;
+        player.atkSlot[0] = false;
+        player.atkSlot[1] = true;
+        player.atkSlot[2] = false;
+        player.atkSlot[3] = false;
+        player.atkSlot[4] = false;
     }
 
-    public static void rogue(){                  //classe combattente con le sue stats 
+    public static void rogue(){                  //classe esperto con le sue stats 
         player.role = "esperto";
         player.max_HP = 18;
         player.HP = player.max_HP;
@@ -36,6 +47,11 @@ public class getJob {
         player.mres = 1;
         player.luck = 1;
         player.lv = 1;
+        player.atkSlot[0] = false;
+        player.atkSlot[1] = false;
+        player.atkSlot[2] = true;
+        player.atkSlot[3] = false;
+        player.atkSlot[4] = false;
     }
     
     public static void chooseClass(){
@@ -69,8 +85,7 @@ public class getJob {
             }
             
         }
-        System. out. print("\033[H\033[2J");
-        sc.close();   
+        System. out. print("\033[H\033[2J");  
     }
 }
 

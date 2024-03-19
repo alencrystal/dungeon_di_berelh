@@ -8,7 +8,6 @@ public class test {
         player.upgrade();    
         fight.start();
         
-
     }
 
     

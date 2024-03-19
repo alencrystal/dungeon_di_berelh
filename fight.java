@@ -3,13 +3,20 @@ public class fight {
     public static void calculation () throws InterruptedException {
 
         
-        //dopo aver ottenuto il danno lo infligge al nemico 
+        //dopo aver ottenuto il danno lo infligge al nemico, se è 0 (o anche ti stai curando) non di dice che infliggi danno
 
         int dmgPlayer = attack.select();
         enemy.HP = enemy.HP - dmgPlayer;
         Thread.sleep(1000);
-        System.out.println("player dmg =" + dmgPlayer);
+        
+        if (dmgPlayer > 0) {
+            System.out.println("player dmg =" + dmgPlayer);
+        }
+        else{
 
+            Thread.sleep(1000);
+            System.out.println("HP nemico rimanenti = " + enemy.HP);
+        }
 
         if (enemy.HP <= 0) {         
 
@@ -25,8 +32,6 @@ public class fight {
 
             //se il nemico non è stato sconfitto ti attacca anche lui
 
-            Thread.sleep(1000);
-            System.out.println("HP nemico rimanenti = " + enemy.HP);
             int dmgEnemy = defend.dmg(1, 0, 1, 0);
             player.HP = player.HP - dmgEnemy;
             Thread.sleep(1000);
@@ -54,7 +59,7 @@ public class fight {
         //per far cominciare il combattimento, finchè entrambi sono vivi il fight va avanti
 
         while (player.HP > 0 && enemy.HP > 0) {  
-              
+
             fight.calculation();
         }      
     }

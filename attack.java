@@ -38,41 +38,90 @@ public class attack {
             switch (numberSelect) {
 
                 case "1":
-                    finalDmg = attack.dmg(1, 0, 1, 0);
-                    syntax = true;
+
+                    //solo ad, se possiedi l'attacco
+                    if (player.atkSlot[0] = true) {
+                        finalDmg = attack.dmg(1, 0, 1, 0);
+                        syntax = true;
+                    }
+                    System. out. print("\033[H\033[2J");
                     break;
+                
                 case "2":
-                    finalDmg = attack.dmg(0, 1, 0, 1);
-                    syntax = true;
+
+                    //solo ap, se possiedi l'attacco
+                    if (player.atkSlot[1] = true) {
+                        finalDmg = attack.dmg(0, 1, 0, 1);
+                        syntax = true;   
+                    }
+                    System. out. print("\033[H\033[2J");
                     break;
+                
                 case "3":
-                    finalDmg = attack.dmg(1, 1, 1, 1);
-                    syntax = true;
+
+                    //entrambi, se possiedi l'attacco
+                    if (player.atkSlot[2] = true) {
+                        finalDmg = attack.dmg(1, 1, 1, 1);
+                        syntax = true;   
+                    }
+                    System. out. print("\033[H\033[2J");
                     break;
+                
                 case "4":
-                    finalDmg = attack.dmg(2, 0, 1, 1);
-                    syntax = true;
+
+                    //doppio ad, se possiedi l'attacco
+                    if (player.atkSlot[3] = true) {
+                        finalDmg = attack.dmg(2, 0, 1, 1);
+                        syntax = true;   
+                    }
+                    System. out. print("\033[H\033[2J");
                     break;
+                
                 case "5":
-                    finalDmg = attack.dmg(0, 2, 1, 1);
-                    syntax = true;
+
+                    //doppio ap, se possiedi l'attacco
+                    if (player.atkSlot[4] = true) {
+                        finalDmg = attack.dmg(0, 2, 1, 1);
+                        syntax = true;   
+                    }
+                    System. out. print("\033[H\033[2J");
                     break;
+                
                 case "6":
-                    finalDmg = attack.dmg(0, 0, 0, 0);
+
+                    //per curarsi
+                    System. out. print("\033[H\033[2J");
+                    Random rand = new Random();
+                    int randHeal = rand.nextInt(1, 7);
+                    attack.healTaken(randHeal);
                     syntax = true;
                     break;
+
+                
                 case "info":
+
+                    //per accedere alle info
                     tutorial.Fight();
+                    System. out. print("\033[H\033[2J");
                     break;
+
                 default:
                     break;
                 
             }
             
         }
-        System. out. print("\033[H\033[2J");
-        sc.close();
         return finalDmg;
     }
 
+    public static void healTaken(int heal) throws InterruptedException{                         //per curarsi con il cap (la max vita)
+        heal += player.luck;
+        player.HP += heal;
+        Thread.sleep(1000);
+        System.out.println("ti sei curato di "+ heal);
+        if(player.HP >= player.max_HP){
+            player.HP = player.max_HP;
+        }
+
+    }
 }

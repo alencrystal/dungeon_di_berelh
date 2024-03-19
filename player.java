@@ -13,6 +13,7 @@ public class player {
     static int lv;
     static int exp = 0;
     static int max_exp = 100;                       //per raggiungere il livello successivo bisogna raggiungere la max_exp
+    static boolean atkSlot[];                       //a seconda di che valori si hanno al suo interno il player può eseguire diversi attacchi
     
 
     public static void reName(){                        //Pg.reName() per rinominare il pg
@@ -23,20 +24,10 @@ public class player {
         System.out.println("inserisci il tuo nome");
         String newName = sc.nextLine();
         player.name = newName;
-        sc.close();
 
     }
 
-    public static int healTaken(int i){                         //per curarsi con il cap di 50 (la max vita)
-        HP += i;
-        HP += luck;
-        if(HP >= max_HP){
-            HP = max_HP;
-        }
-        return HP;
-    }
-
-    public static void newLv(){
+    public static void newLv() throws InterruptedException{
        
         if (player.exp >= player.max_exp){                                
 
@@ -44,7 +35,7 @@ public class player {
             lv += 1;
             max_exp += lv * 100;                                                //quando sali di livello aumenta l'exp massima
             max_HP += lv + (luck / 2);                                          //aumenta la vita massima
-            player.healTaken(lv);
+            attack.healTaken(lv);
             player.upgrade();
             player.getStats();
         }
@@ -95,8 +86,7 @@ public class player {
             }
             
         }
-        System. out. print("\033[H\033[2J");
-        sc.close();   
+        System. out. print("\033[H\033[2J");  
     }
 
     public static void getStats(){                       //returna tutte le statistiche
