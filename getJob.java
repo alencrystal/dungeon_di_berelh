@@ -12,11 +12,9 @@ public class getJob {
         player.mres = 1;
         player.luck = 0;
         player.lv = 1;
-        player.exp = 0;
-        player.max_exp = 100;
     }
 
-    public static void wizard(){
+    public static void wizard(){                 //classe combattente con le sue stats 
         player.role = "mago";
         player.max_HP = 15;
         player.HP = player.max_HP;
@@ -26,11 +24,9 @@ public class getJob {
         player.mres = 2;
         player.luck = 0;
         player.lv = 1;
-        player.exp = 70;
-        player.max_exp = 100;
     }
 
-    public static void rogue(){
+    public static void rogue(){                  //classe combattente con le sue stats 
         player.role = "esperto";
         player.max_HP = 18;
         player.HP = player.max_HP;
@@ -40,8 +36,6 @@ public class getJob {
         player.mres = 1;
         player.luck = 1;
         player.lv = 1;
-        player.exp = 0;
-        player.max_exp = 100;
     }
     
     public static void chooseClass(){

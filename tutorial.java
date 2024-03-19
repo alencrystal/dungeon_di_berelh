@@ -3,6 +3,9 @@ public class tutorial {
     
     public static void Fight() throws InterruptedException {
 
+
+        //tutorial combattimento
+
         Scanner sc=new Scanner(System.in);
         System. out. print("\033[H\033[2J");
         System.out.println("cosa vuoi sapere? \n 1 vedere gli attacchi  che hai disponibili \n 2  come sbloccare gli attacchi?");

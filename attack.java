@@ -4,6 +4,11 @@ public class attack {
     
     public static int dmg(int adBuild, int apBuild, int defBuild, int mresBuild){
 
+        /*
+        richiamata questa funzione venendole forniti dei moltiplicatori genera il danno che verrà inflitto al nemico
+        se il danno che verrebbe inferto è negativo viene riportanto a zero
+        */
+
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
         int hit = rand1 + player.AD * adBuild + player.AP * apBuild - enemy.def * defBuild - enemy.mres * mresBuild;
@@ -16,6 +21,10 @@ public class attack {
 
     public static int select() throws InterruptedException{
 
+        /*
+        funzione che permette di scegliere l'attacco: la differenza è che ognuno ha dei moltiplicatori diversi
+        permette anche di accedere al tutorial dei combattimenti
+        */
         int finalDmg = 0;
         boolean syntax = false;
         Scanner sc=new Scanner(System.in);
@@ -23,7 +32,7 @@ public class attack {
         while (syntax == false) {
 
             System. out. print("\033[H\033[2J");
-            System.out.println("scegli che attacco eserguire (per tutorial premi scrivi 'info')");
+            System.out.println("scegli che attacco eserguire (per tutorial scrivi 'info')");
             String numberSelect = sc.nextLine();
             
             switch (numberSelect) {

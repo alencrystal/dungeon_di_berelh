@@ -2,13 +2,18 @@ public class fight {
     
     public static void calculation () throws InterruptedException {
 
+        
+        //dopo aver ottenuto il danno lo infligge al nemico 
+
         int dmgPlayer = attack.select();
         enemy.HP = enemy.HP - dmgPlayer;
         Thread.sleep(1000);
         System.out.println("player dmg =" + dmgPlayer);
 
 
-        if (enemy.HP <= 0) {
+        if (enemy.HP <= 0) {         
+
+            //se il nemico viene sconfitto ti da l'exp e poi controlla se puoi livellare
             
             Thread.sleep(1000);
             System.out.println("hai sconfitto il "+ enemy.name +", complimenti!");
@@ -17,6 +22,8 @@ public class fight {
             player.newLv();
         }
         else{
+
+            //se il nemico non è stato sconfitto ti attacca anche lui
 
             Thread.sleep(1000);
             System.out.println("HP nemico rimanenti = " + enemy.HP);
@@ -31,6 +38,8 @@ public class fight {
 
             if (player.HP <= 0){
                 
+                //se sei stato sconfitto finisce la partita
+
                 Thread.sleep(2000);
                 System. out. print("\033[H\033[2J");
                 System.out.println("fine partita, sei stato sconfitto.\n\n");
@@ -40,10 +49,12 @@ public class fight {
         }
     }
 
-    public static void start() throws InterruptedException{                     //per scegliere gli attacchi(devo ancora implementarlo)
+    public static void start() throws InterruptedException{                     
 
-        while (player.HP > 0 && enemy.HP > 0) {
-            
+        //per far cominciare il combattimento, finchè entrambi sono vivi il fight va avanti
+
+        while (player.HP > 0 && enemy.HP > 0) {  
+              
             fight.calculation();
         }      
     }

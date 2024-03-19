@@ -1,10 +1,13 @@
 import java.util.Random;
 public class defend {
-    
-    public static int dmg(int a, int b, int c, int d){
+
+    //richiamata questa funzione venendole forniti dei moltiplicatori genera il danno che verrà inflitto al player
+
+
+    public static int dmg(int adBuild, int apBuild, int defBuild, int mresBuild){
         Random rand = new Random();
         int rand1 = rand.nextInt(1, 7);
-        int hit = rand1 + enemy.AD * a + enemy.AP * b - player.def * c - player.mres * d;
+        int hit = rand1 + enemy.AD * adBuild + enemy.AP * apBuild - player.def * defBuild - player.mres * mresBuild;
         if (hit < 0) {
             hit = 0;
         }

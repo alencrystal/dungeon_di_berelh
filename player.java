@@ -2,17 +2,17 @@ import java.util.Scanner;
 public class player {
 
     static String name;                            //tutte le variabili del pg 
-    static String role;
+    static String role;                            //la classe del pg
     static int max_HP;
     static int HP;
     static int AD;
     static int AP;
     static int def;
     static int mres;
-    static int luck;
+    static int luck;                                //luck sarebbe l'heal bonus
     static int lv;
-    static int exp;
-    static int max_exp;
+    static int exp = 0;
+    static int max_exp = 100;                       //per raggiungere il livello successivo bisogna raggiungere la max_exp
     
 
     public static void reName(){                        //Pg.reName() per rinominare il pg
@@ -37,12 +37,12 @@ public class player {
 
     public static void newLv(){
        
-        if (player.exp >= player.max_exp){
+        if (player.exp >= player.max_exp){                                
 
-            System.out.println("complimenti! sei salito di livello");
+            System.out.println("complimenti! sei salito di livello");       //
             lv += 1;
-            max_exp += lv * 100;
-            max_HP += lv + (luck / 2);
+            max_exp += lv * 100;                                                //quando sali di livello aumenta l'exp massima
+            max_HP += lv + (luck / 2);                                          //aumenta la vita massima
             player.healTaken(lv);
             player.upgrade();
             player.getStats();
@@ -50,7 +50,7 @@ public class player {
     }
 
 
-    public static void upgrade(){
+    public static void upgrade(){                                           //permette di scegliere una stat da aumentare
 
         boolean syntax = false;
         Scanner sc=new Scanner(System.in);
@@ -97,13 +97,11 @@ public class player {
         System. out. print("\033[H\033[2J");   
     }
 
-    public static void getStats(){                       //returna le statistiche
+    public static void getStats(){                       //returna tutte le statistiche
 
-        System.out.println("nome: "+ name +"\nclasse: "+ role +"\nlv: "+ lv +"\nexp: "+ exp + " /" + max_exp +"\nvita "+ HP + " /" + max_HP);
+        System.out.println("nome: "+ name +"\nclasse inziale: "+ role +"\nlv: "+ lv +"\nexp: "+ exp + " /" + max_exp +"\nvita "+ HP + " /" + max_HP);
         System.out.println("\nforza "+ AD +"\nmagia "+ AP +"\ndifesa "+ def +"\nresistenza "+ mres +"\nfortuna "+ luck);
     }
 
     
-
-    //              System. out. print("\033[H\033[2J");
 }
