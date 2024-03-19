@@ -25,5 +25,6 @@ public class tutorial {
             default:
                 break;
         }
+        sc.close();
     }
 }

@@ -23,6 +23,7 @@ public class player {
         System.out.println("inserisci il tuo nome");
         String newName = sc.nextLine();
         player.name = newName;
+        sc.close();
 
     }
 
@@ -94,7 +95,8 @@ public class player {
             }
             
         }
-        System. out. print("\033[H\033[2J");   
+        System. out. print("\033[H\033[2J");
+        sc.close();   
     }
 
     public static void getStats(){                       //returna tutte le statistiche
@@ -103,5 +105,5 @@ public class player {
         System.out.println("\nforza "+ AD +"\nmagia "+ AP +"\ndifesa "+ def +"\nresistenza "+ mres +"\nfortuna "+ luck);
     }
 
-    
+
 }
