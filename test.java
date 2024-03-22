@@ -7,7 +7,10 @@ public class test {
         enemy.chooseOgre();
         player.upgrade();    
         fight.start();
-        
+        while (player.HP > 0) {
+            enemy.chooseGoblin();
+            fight.start();
+        }
     }
 
     

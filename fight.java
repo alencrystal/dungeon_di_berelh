@@ -12,11 +12,6 @@ public class fight {
         if (dmgPlayer > 0) {
             System.out.println("player dmg =" + dmgPlayer);
         }
-        else{
-
-            Thread.sleep(1000);
-            System.out.println("HP nemico rimanenti = " + enemy.HP);
-        }
 
         if (enemy.HP <= 0) {         
 
@@ -36,8 +31,6 @@ public class fight {
             player.HP = player.HP - dmgEnemy;
             Thread.sleep(1000);
             System.out.println("enemy dmg =" + dmgEnemy);
-            Thread.sleep(1000);
-            System.out.println("HP rimanenti = " + player.HP);
             Thread.sleep(1000);
             
 

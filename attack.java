@@ -33,6 +33,7 @@ public class attack {
 
             System. out. print("\033[H\033[2J");
             System.out.println("scegli che attacco eserguire (per tutorial scrivi 'info')");
+            System.out.println("hp " + player.HP + "              hp nemico " + enemy.HP );
             String numberSelect = sc.nextLine();
             
             switch (numberSelect) {
@@ -92,7 +93,7 @@ public class attack {
                     //per curarsi
                     System. out. print("\033[H\033[2J");
                     Random rand = new Random();
-                    int randHeal = rand.nextInt(1, 7);
+                    int randHeal = rand.nextInt(2, 8);
                     attack.healTaken(randHeal);
                     syntax = true;
                     break;
