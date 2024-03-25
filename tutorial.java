@@ -40,8 +40,6 @@ public class tutorial {
                 System.out.println("il secondo viene scelto casualmente,\nmentre quelli successivi vengono assegnati salendo di livello");
                 Thread.sleep(5000);
                 break;
-            case "3":
-                break;
             default:
                 break;
         }

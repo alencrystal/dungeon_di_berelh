@@ -4,8 +4,9 @@ public class test {
         
         player.reName();
         getJob.chooseClass();
-        enemy.chooseOgre();
-        player.upgrade();    
+        enemy.chooseGoblin();
+        player.upgrade();
+        player.exp += 100;    
         fight.start();
         while (player.HP > 0) {
             enemy.chooseGoblin();

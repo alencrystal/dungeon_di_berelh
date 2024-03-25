@@ -112,6 +112,7 @@ public class attack {
             }
             
         }
+        System.out.println("player dmg =" + finalDmg);
         return finalDmg;
     }
 
@@ -124,5 +125,16 @@ public class attack {
             player.HP = player.max_HP;
         }
 
+    }
+
+    public static void getAttack(){
+
+        for (int i = 0; i <= 4; i++){ 
+
+            if (player.atkSlot[i]!= true) {
+                player.atkSlot[i] = true;
+                break;
+            }
+        }
     }
 }

@@ -31,13 +31,14 @@ public class player {
        
         if (player.exp >= player.max_exp){                                
 
-            System.out.println("complimenti! sei salito di livello");       //
+            System.out.println("\ncomplimenti! sei salito di livello");       //
             lv += 1;
             max_exp += lv * 100;                                                //quando sali di livello aumenta l'exp massima
             max_HP += lv + (luck / 2);                                          //aumenta la vita massima
             attack.healTaken(lv);
             player.upgrade();
             player.getStats();
+            attack.getAttack();
         }
     }
 
