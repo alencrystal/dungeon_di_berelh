@@ -16,7 +16,17 @@ public class dungeon {
         }
     
         enemy.chooseLitch();
-            System.out.println("");
+            System.out.println("sei davanti ad un portone....");
+            Thread.sleep(1000);
+            System.out.println("avverti una forte presenza dietro ad esso....");
+            Thread.sleep(1000);
+            System.out.println("decidi di etrare...");
+            Thread.sleep(1000);
+            enemy.chooseLitch();
+            System. out. print("\033[H\033[2J");
+            System.out.println("un litch ti accoglie accoglie con una risata maligna \npreparati a combattere!");
+            Thread.sleep(1500);
+
             while (player.lv < 6) {
                 
                 Random rand = new Random();

@@ -40,6 +40,7 @@ public class fight {
                 System.out.println("fine partita, sei stato sconfitto.\n\n");
                 Thread.sleep(2000);
                 player.getStats();
+                System.exit(0);
             }
         }
     }
