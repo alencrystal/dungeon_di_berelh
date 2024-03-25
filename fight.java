@@ -9,9 +9,6 @@ public class fight {
         enemy.HP = enemy.HP - dmgPlayer;
         Thread.sleep(1000);
         
-        if (dmgPlayer > 0) {
-            System.out.println("player dmg =" + dmgPlayer);
-        }
 
         if (enemy.HP <= 0) {         
 

@@ -33,7 +33,7 @@ public class attack {
 
             System. out. print("\033[H\033[2J");
             System.out.println("scegli che attacco eserguire (per tutorial scrivi 'info')");
-            System.out.println("hp " + player.HP + "              hp nemico " + enemy.HP );
+            System.out.println("hp " + player.HP + "              hp "+ enemy.name +" "+ enemy.HP );
             String numberSelect = sc.nextLine();
             
             switch (numberSelect) {
@@ -46,6 +46,7 @@ public class attack {
                         syntax = true;
                     }
                     System. out. print("\033[H\033[2J");
+                    System.out.println("player dmg =" + finalDmg);
                     break;
                 
                 case "2":
@@ -56,6 +57,7 @@ public class attack {
                         syntax = true;   
                     }
                     System. out. print("\033[H\033[2J");
+                    System.out.println("player dmg =" + finalDmg);
                     break;
                 
                 case "3":
@@ -66,6 +68,7 @@ public class attack {
                         syntax = true;   
                     }
                     System. out. print("\033[H\033[2J");
+                    System.out.println("player dmg =" + finalDmg);
                     break;
                 
                 case "4":
@@ -76,6 +79,7 @@ public class attack {
                         syntax = true;   
                     }
                     System. out. print("\033[H\033[2J");
+                    System.out.println("player dmg =" + finalDmg);
                     break;
                 
                 case "5":
@@ -86,6 +90,7 @@ public class attack {
                         syntax = true;   
                     }
                     System. out. print("\033[H\033[2J");
+                    System.out.println("player dmg =" + finalDmg);
                     break;
                 
                 case "6":
@@ -112,7 +117,6 @@ public class attack {
             }
             
         }
-        System.out.println("player dmg =" + finalDmg);
         return finalDmg;
     }
 

@@ -37,7 +37,7 @@ public class tutorial {
             case "2":
                 System. out. print("\033[H\033[2J");
                 System.out.println("il primo attacco che possiedi viene determinato in base alla classe,");
-                System.out.println("il secondo viene scelto casualmente,\nmentre quelli successivi vengono assegnati salendo di livello");
+                System.out.println("mentre quelli successivi vengono assegnati salendo di livello");
                 Thread.sleep(5000);
                 break;
             default:

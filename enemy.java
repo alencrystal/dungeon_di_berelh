@@ -13,9 +13,11 @@ public class enemy {
     static int expDrop;
     static int atkCombo = 0;
 
-    public static void lvUp(){                          //il lv-up dei mostri automatico + frase spawn
+    public static void lvUp() throws InterruptedException{                          //il lv-up dei mostri automatico + frase spawn
 
-        System.out.println("è apparso un "+ enemy.name + "!");
+        System. out. print("\033[H\033[2J");
+        System.out.println("entri in una stanza ed incappi in un "+ enemy.name +", preparati a combattere!");
+        Thread.sleep(2000);
 
         if (player.lv > enemy.lv) {
             
@@ -56,7 +58,7 @@ public class enemy {
     }
 
 
-    public static void  chooseGoblin(){                  //evocare un goblin
+    public static void  chooseGoblin() throws InterruptedException{                  //evocare un goblin
 
         enemy.name = "goblin";
         enemy.max_HP = 20;
@@ -74,7 +76,7 @@ public class enemy {
     }
 
 
-    public static void  chooseOgre(){                  //evocare un orco
+    public static void  chooseOgre() throws InterruptedException{                  //evocare un orco
 
         enemy.name = "orco";
         enemy.max_HP = 30;
@@ -91,7 +93,7 @@ public class enemy {
 
     }
     
-    public static void  chooseLitch(){                  //evocare uno stregone
+    public static void  chooseLitch() throws InterruptedException{                  //evocare uno stregone
 
         enemy.name = "stregone";
         enemy.max_HP = 50;
