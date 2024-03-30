@@ -14,7 +14,38 @@ public class defend {
         return hit;
     }
 
+    public static int chooseEnemyAttack(){
 
+        int adMultiplier = 0;
+        int apMultiplier = 0;
+        int defMultiplier = 0;
+        int mresMultiplier = 0;
+
+        if (enemy.name == "goblin") {
+            adMultiplier = 1;
+            apMultiplier = 0;
+            defMultiplier = 1;
+            mresMultiplier = 0;
+        }
+
+        if (enemy.name == "orco") {
+            adMultiplier = 1;
+            apMultiplier = 1;
+            defMultiplier = 1;
+            mresMultiplier = 0;
+        }
+
+        if (enemy.name == "mago") {
+            adMultiplier = 0;
+            apMultiplier = 1;
+            defMultiplier = 1;
+            mresMultiplier = 1;
+        }
+
+
+
+        return defend.dmg(adMultiplier, apMultiplier, defMultiplier, mresMultiplier);
+    }
     /*public static int castSpell(){
         
         Random rand = new Random();

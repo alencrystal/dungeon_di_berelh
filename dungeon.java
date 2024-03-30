@@ -15,24 +15,25 @@ public class dungeon {
             fight.start();
         }
     
+
+        System. out. print("\033[H\033[2J");
+        System.out.println("sei davanti ad un portone....");
+        Thread.sleep(2000);
+        System.out.println("avverti una forte presenza dietro ad esso....");
+        Thread.sleep(2000);
+        System.out.println("decidi di etrare...");
+        Thread.sleep(2000);
+        System.out.println("ti accoglie accoglie una risata maligna");
+        Thread.sleep(2000);
         enemy.chooseLitch();
-            System.out.println("sei davanti ad un portone....");
-            Thread.sleep(1000);
-            System.out.println("avverti una forte presenza dietro ad esso....");
-            Thread.sleep(1000);
-            System.out.println("decidi di etrare...");
-            Thread.sleep(1000);
-            enemy.chooseLitch();
-            System. out. print("\033[H\033[2J");
-            System.out.println("un litch ti accoglie accoglie con una risata maligna \npreparati a combattere!");
-            Thread.sleep(1500);
+        fight.start();
 
             while (player.lv < 6) {
                 
                 Random rand = new Random();
                 int rand1 = rand.nextInt(0, 10);
     
-                if (rand1 > 5) {
+                if (rand1 > 4) {
                     enemy.chooseOgre();
                 }
                 else{

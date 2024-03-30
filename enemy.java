@@ -16,7 +16,7 @@ public class enemy {
     public static void lvUp() throws InterruptedException{                          //il lv-up dei mostri automatico + frase spawn
 
         System. out. print("\033[H\033[2J");
-        System.out.println("entri in una stanza ed incappi in un "+ enemy.name +", preparati a combattere!");
+        System.out.println("entri nella stanza ed incappi in un "+ enemy.name +", preparati a combattere!");
         Thread.sleep(2000);
 
         if (player.lv > enemy.lv) {
@@ -95,7 +95,7 @@ public class enemy {
     
     public static void  chooseLitch() throws InterruptedException{                  //evocare uno stregone
 
-        enemy.name = "stregone";
+        enemy.name = "mago";
         enemy.max_HP = 50;
         enemy.HP = enemy.max_HP;
         enemy.AD = 1;

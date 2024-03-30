@@ -24,7 +24,7 @@ public class fight {
 
             //se il nemico non è stato sconfitto ti attacca anche lui
 
-            int dmgEnemy = defend.dmg(1, 0, 1, 0);
+            int dmgEnemy = defend.chooseEnemyAttack();
             player.HP = player.HP - dmgEnemy;
             Thread.sleep(1000);
             System.out.println("enemy dmg =" + dmgEnemy);
